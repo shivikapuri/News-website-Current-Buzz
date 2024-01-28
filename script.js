@@ -1,7 +1,10 @@
 const API_KEY = "37c41c316ba044638c1a9a7dd255c0cc";
 const url = "https://newsapi.org/v2/everything?q=";
 
-window.addEventListener("load", () => fetchNews("India"));
+const randomQueryTerms = ["technology", "politics", "science", "health","international","science","environmental","business"];
+const randomQuery = randomQueryTerms[Math.floor(Math.random() * randomQueryTerms.length)];
+
+window.addEventListener("load", () => fetchNews(randomQuery));
 
 function reload() {
     window.location.reload();
